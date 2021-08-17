@@ -1,48 +1,24 @@
-# class BankAccount:
-  
-#     def __init__(self,service,salary,phone_number,name):
-#      self.services=services
-#      self.salary=salary
-#      self.phone_number=phone_number
-#      self.balance=0
-#      self.name=name
-
-#     def opinion(self):
-#         return f"Equity offers one of the best {self.services}"
-
-#     def income(self):
-#         return f"Employers earn more than enough money for their upkeep ${self.salary}."
-
-#     def show_balance(self):
-#         return f"Hello {self.name} your balance is {self.balance}"
-
-#     def deposit(self,amount):
-#         self.balance += amount
-#         return self.show_balance()
-#     def withdraw(self,amount)
-#         if amount >self.balance
-#         return f
-
-
-    
-
 class BankAccount:
   
-    def __init__(self,phone_number,name):
+    def __init__(self,name,phone_number):
      self.phone_number=phone_number
-     self.balance=0
+     self.show_balance=0
      self.name=name
      self.borrow=0
 
-    def show-balance(self):
+    def show_balance(self,amount):
         for transaction in self.balance:
             amount=transaction["amount"]
             narration=transaction["narration"]
             time=transaction["time"]
             date=time.strftime["%d/%m/%y"]
-          print(f"{date}:{narration} {amount}")
-        return  
+        return f"{date}:{narration} {amount}"
+          
     def withdraw(self,amount):
+        try:
+            10 + amount
+        except TypeError:
+            return f"The amount must be in figures"
         if amount>self.balance:
             return f"your balance is {self.balance} you cannot withdraw{amount}"
         else:
@@ -51,6 +27,7 @@ class BankAccount:
             withdrawals={"amount":amount,"time":now,"narration":"you have withdrawn"}#a dictionary with transaction details
             self.statement.append(withdrawals)
         return self.show_balance()
+        
 
     def borrow(self,amount):
         if amount <0:
@@ -84,3 +61,23 @@ class BankAccount:
             self.statement.append(repay_transaction)
             return f"you have fully repaid your loan and your excess of ksh {excess} has been deposited in your account,your balance is {self.balance} "
       
+        def transfer(self,amount):
+            try:
+                1000 + amount
+            except TypeError:
+                return f"The amount should be an int"
+            fee=amount * 0.5
+            total= amount + fee
+            if amount > 0:
+                return f"Your balance is {self.balance} and you need at least {total} for this transfer"
+
+            else:
+                self.balance=total
+                account.deposit=(amount)
+                return f"You have transfered {amount} to {account} and your balance is this"
+        
+       def deposit(self,amount):
+        self.balance += amount
+        return self.show_balance()
+
+        

@@ -1,30 +1,3 @@
-# class BankAccount:
-  
-#     def __init__(self,service,salary,phone_number,name):
-#      self.services=services
-#      self.salary=salary
-#      self.phone_number=phone_number
-#      self.balance=0
-#      self.name=name
-
-#     def opinion(self):
-#         return f"Equity offers one of the best {self.services}"
-
-#     def income(self):
-#         return f"Employers earn more than enough money for their upkeep ${self.salary}."
-
-#     def show_balance(self):
-#         return f"Hello {self.name} your balance is {self.balance}"
-
-#     def deposit(self,amount):
-#         self.balance += amount
-#         return self.show_balance()
-#     def withdraw(self,amount)
-#         if amount >self.balance
-#         return f
-
-
-    
 from datetime import datetime
 class BankAccount:
   
